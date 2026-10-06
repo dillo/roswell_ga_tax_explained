@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Sites-generated application (vinext on Cloudflare Workers, React, Tailwind), as required by the requested Sites workflow.
+Next.js application (React, Tailwind), deployed on Vercel.
 
 ## Users
 
