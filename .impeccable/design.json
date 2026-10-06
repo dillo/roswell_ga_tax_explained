@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-08T18:52:27.839701+00:00",
+  "title": "Design System: Roswell, explained",
+  "extensions": {
+    "colorMeta": {
+      "blue": {
+        "role": "primary",
+        "displayName": "Civic cobalt"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Reading ink"
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "White paper"
+      },
+      "peach": {
+        "role": "secondary",
+        "displayName": "County peach"
+      },
+      "schools": {
+        "role": "secondary",
+        "displayName": "Schools periwinkle"
+      },
+      "green": {
+        "role": "secondary",
+        "displayName": "City green"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Editorial display",
+        "purpose": "Opening headline."
+      },
+      "body": {
+        "displayName": "Reading text",
+        "purpose": "Plain-language educational prose."
+      }
+    },
+    "shadows": [
+      {
+        "name": "house-label",
+        "value": "0 7px 24px #102e8530",
+        "purpose": "Floating label over the tactile house."
+      },
+      {
+        "name": "calculator",
+        "value": "0 15px 50px #19305d0a",
+        "purpose": "Subtle enclosure depth."
+      },
+      {
+        "name": "slider-thumb",
+        "value": "0 3px 12px #14244935",
+        "purpose": "Range control affordance."
+      }
+    ],
+    "motion": [
+      {
+        "name": "action-hover",
+        "value": "background .2s",
+        "purpose": "Primary action fill transition."
+      },
+      {
+        "name": "anchor-scroll",
+        "value": "smooth",
+        "purpose": "In-page reading navigation; disabled for reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "intermediate",
+        "value": "1000px"
+      },
+      {
+        "name": "stack",
+        "value": "800px"
+      },
+      {
+        "name": "small",
+        "value": "480px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Prominent in-page or download link.",
+      "html": "<a class=\"ds-cta\" href=\"#\">Start with the big picture \u2193</a>",
+      "css": ".ds-cta{display:inline-flex;gap:22px;align-items:center;background:var(--paper,#fff);color:var(--ink,#142449);padding:15px 22px;border-radius:8px;text-decoration:none;font-family:var(--font-body,Manrope),sans-serif;font-weight:700;transition:background .2s}.ds-cta:hover{background:var(--peach,#ffd7bd)}.ds-cta:focus-visible{outline:3px solid #ee815d;outline-offset:5px}"
+    },
+    {
+      "name": "Reset action",
+      "kind": "button",
+      "refersTo": "",
+      "description": "Small underlined reset for the example.",
+      "html": "<button class=\"ds-reset\">Reset to the guide\u2019s $500,000 example</button>",
+      "css": ".ds-reset{background:none;border:0;padding:5px 0;color:var(--blue,#234ae5);text-decoration:underline;text-underline-offset:4px;font-family:var(--font-body,Manrope),sans-serif;font-size:.8rem;cursor:pointer}.ds-reset:focus-visible{outline:3px solid #ee815d;outline-offset:5px}"
+    },
+    {
+      "name": "Authority tag",
+      "kind": "chip",
+      "refersTo": "",
+      "description": "Noninteractive county identifier.",
+      "html": "<span class=\"ds-tag\">County</span>",
+      "css": ".ds-tag{display:inline-block;background:var(--peach,#ffd7bd);color:var(--ink,#142449);padding:7px 20px;border-radius:30px;font-family:var(--font-body,Manrope),sans-serif;font-size:.85rem;font-weight:700}"
+    },
+    {
+      "name": "Authority card",
+      "kind": "card",
+      "refersTo": "authority-card",
+      "description": "Flat service explanation tied to an authority color.",
+      "html": "<article class=\"ds-authority\"><h3>Fulton County</h3><p>Courts, elections, libraries, jail operations, and human services.</p><span>Who sets this rate?</span><b>Board of Commissioners</b></article>",
+      "css": ".ds-authority{border-radius:14px;padding:30px;background:var(--peach,#ffd7bd);color:var(--ink,#142449);font-family:var(--font-body,Manrope),sans-serif;max-width:320px}.ds-authority h3{font-family:var(--font-display,Archivo),sans-serif;font-size:1.45rem;font-weight:600;line-height:1.08;letter-spacing:-.035em;margin:25px 0 0}.ds-authority p{font-size:1rem;line-height:1.7;margin:17px 0}.ds-authority span{display:block;font-size:.85rem}.ds-authority b{font-size:.9rem}"
+    },
+    {
+      "name": "Question selector",
+      "kind": "button",
+      "refersTo": "question-selected",
+      "description": "Selected contextual contact question.",
+      "html": "<button class=\"ds-question\" aria-pressed=\"true\">I think my home\u2019s value is wrong. \u2192</button>",
+      "css": ".ds-question{display:flex;align-items:center;justify-content:space-between;gap:20px;text-align:left;background:var(--blue,#234ae5);color:var(--paper,#fff);border:0;border-radius:8px;padding:23px 18px;font-family:var(--font-body,Manrope),sans-serif;font-size:1rem;font-weight:650;cursor:pointer}.ds-question:focus-visible{outline:3px solid #ee815d;outline-offset:5px}"
+    },
+    {
+      "name": "Guide navigation",
+      "kind": "nav",
+      "refersTo": "",
+      "description": "Simple text links to sections.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Guide sections\"><a href=\"#\">The big picture</a><a href=\"#\">The math</a><a href=\"#\">2026 dates</a></nav>",
+      "css": ".ds-nav{display:flex;gap:30px;align-items:center;font-family:var(--font-body,Manrope),sans-serif}.ds-nav a{color:var(--ink,#142449);text-decoration:none;font-size:.9rem}.ds-nav a:hover{color:var(--blue,#234ae5)}.ds-nav a:focus-visible{outline:3px solid #ee815d;outline-offset:5px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Civic Learning Exhibit",
+    "overview": "Large editorial headings, plain-language prose, and tangible diagrams help homeowners understand the relationships behind property taxes. Cobalt anchors the page; quiet white and pastel areas support reading and calculation. The house image supplies tactile material while controls and cards remain mostly flat.",
+    "keyCharacteristics": [
+      "Archivo display and Manrope body",
+      "Stable county, school, and city colors",
+      "Generous reading space",
+      "Contextual help with official references"
+    ],
+    "rules": [
+      {
+        "name": "The Authority Continuity Rule",
+        "body": "Keep each authority\u2019s color consistent and retain text labels.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do pair diagrams with explanations and formulas.",
+      "Do keep example assumptions and dates visible.",
+      "Do retain keyboard focus."
+    ],
+    "donts": [
+      "Do not imply the example is an actual bill.",
+      "Do not communicate meaning solely through color.",
+      "Do not add shadows to ordinary cards."
+    ]
+  }
+}
